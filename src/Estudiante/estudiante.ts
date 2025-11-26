@@ -14,26 +14,3 @@ class Estudiante {
     }
 }
 
-// --- EJEMPLO DE USO (PRUEBAS) ---
-
-const gestionEstudiante = new Estudiante();
-
-// Datos iniciales de prueba
-let promedioActual = 8;
-let faltasTotales = 2;
-
-console.log(`--- Estado Inicial ---`);
-console.log(`Promedio: ${promedioActual}, Faltas: ${faltasTotales}`);
-
-// Prueba 1: Agregar una nueva nota
-promedioActual = gestionEstudiante.agregarNota(promedioActual, 10);
-console.log(`Nueva nota agregada (10). Nuevo promedio: ${promedioActual}`);
-
-// Prueba 2: Verificar si aprueba
-const notaMinima = 7;
-const aprobo = gestionEstudiante.aprobar(promedioActual, notaMinima);
-console.log(`¿Aprueba con ${promedioActual} (Mínima ${notaMinima})?: ${aprobo ? "SÍ" : "NO"}`);
-
-// Prueba 3: Registrar faltas
-faltasTotales = gestionEstudiante.calcularFaltas(faltasTotales, 3);
-console.log(`Se registraron 3 faltas nuevas. Total faltas: ${faltasTotales}`);

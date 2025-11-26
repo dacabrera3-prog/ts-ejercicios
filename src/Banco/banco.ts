@@ -23,32 +23,3 @@ class Banco {
     }
 }
 
-// --- EJEMPLO DE USO (PRUEBAS) ---
-
-const miBanco = new Banco();
-let saldoActual = 1000; 
-
-try {
-    console.log(`Saldo inicial: ${saldoActual}`);
-
-    // Prueba 1: Depositar
-    saldoActual = miBanco.depositar(saldoActual, 500);
-    console.log(`Depósito de 500. Nuevo saldo: ${saldoActual}`); 
-
-    // Prueba 2: Transferir
-    saldoActual = miBanco.transferir(saldoActual, 200);
-    console.log(`Transferencia de 200. Nuevo saldo: ${saldoActual}`); 
-
-    // Prueba 3: Retirar (Caso Exitoso)
-    saldoActual = miBanco.retirar(saldoActual, 1000);
-    console.log(`Retiro de 1000. Nuevo saldo: ${saldoActual}`); 
-    // Prueba 4: Retirar (Caso de Error - Fondos insuficientes)
-    console.log("Intentando retirar 500...");
-    saldoActual = miBanco.retirar(saldoActual, 500); 
-
-} catch (error) {
-    // Captura y muestra el mensaje de error
-    if (error instanceof Error) {
-        console.error("Error:", error.message);
-    }
-}
