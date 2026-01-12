@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ejercicio1":"ts-node src/Ejercicio1/ejercicio1.ts",
     "ejercicio2":"ts-node src/Ejercicio2/ejercicio2.ts",
+    "minisistema":"ts-node src/Momento3/minisistema.ts",
     "encapsulacion":"ts-node src/Encapsulacion/encapsulacion.ts",
     "polimorfismo":"ts-node src/Polimorfismo/polimorfismo.ts"
   },
